@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(uv sync)",
+      "Bash(uv run python -c \"import torch; print\\(f'PyTorch {torch.__version__}'\\); print\\(f'CUDA available: {torch.cuda.is_available\\(\\)}'\\); print\\(f'CUDA version: {torch.version.cuda}' if torch.cuda.is_available\\(\\) else 'No CUDA'\\)\")",
+      "Bash(uv run python -c \"import gymnasium; import stable_baselines3; print\\(f'Gymnasium {gymnasium.__version__}'\\); print\\(f'SB3 {stable_baselines3.__version__}'\\)\")",
+      "Bash(uv run pip list 2>/dev/null | grep -iE \"torch|gymnasium|stable-baselines|numpy|tensorboard|shimmy|swig|box2d|pygame|pillow|pandas\")",
+      "Bash(uv run python -c \"\nimport importlib.metadata as meta\npkgs = ['torch', 'torchaudio', 'torchvision', 'gymnasium', 'stable-baselines3', 'numpy', 'tensorboard', 'shimmy', 'pygame', 'pillow', 'pandas', 'box2d-py', 'swig']\nfor p in pkgs:\n    try: print\\(f'{p:25s} {meta.version\\(p\\)}'\\)\n    except: pass\n\")",
+      "Bash(python3 -c \"import stable_baselines3; import os; print\\(os.path.dirname\\(stable_baselines3.__file__\\)\\)\")",
+      "Bash(git remote:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git branch:*)"
+    ]
+  }
+}
