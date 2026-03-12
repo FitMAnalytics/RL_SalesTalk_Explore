@@ -1,0 +1,22 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Data
+*.csv
+
+# Model files (best models and checkpoints)
+models/
+models_*/
+A2C_model_*/
+*.zip
+
+# TensorBoard logs
+sb3_logs/
